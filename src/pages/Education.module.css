@@ -1,0 +1,9 @@
+.grid_cell {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--accent-color);
+}
+
+.line {
+    border: 2px solid black;
+}
