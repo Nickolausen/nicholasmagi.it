@@ -11,7 +11,7 @@ import ContactMe from './pages/ContactMe'
 function App() {
   
   localStorage.setItem("theme", "light")
-  
+  alert("Qui!!")
   return (
     <Router>
       <Routes>
