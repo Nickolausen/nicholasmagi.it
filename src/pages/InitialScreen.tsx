@@ -1,4 +1,4 @@
-import profile_picture from '../assets/media/profile.jpg'
+// import profile_picture from '../assets/media/profile.jpg'
 import Button from '../components/Button'
 
 function InitialScreen() {

@@ -1,5 +1,5 @@
 import ContactCard from "./ContactCard"
-import ThemeSwitcher from "./ThemeSwitcher"
+// import ThemeSwitcher from "./ThemeSwitcher"
 
 function Navbar() 
 {

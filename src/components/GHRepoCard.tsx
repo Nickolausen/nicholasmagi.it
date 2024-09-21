@@ -1,4 +1,4 @@
-import template_img from '../assets/media/template.jpeg'
+// import template_img from '../assets/media/template.jpeg'
 import { GHRepoDetails, languageToID } from '../data/ProjectDetails'
 
 interface IProps {
