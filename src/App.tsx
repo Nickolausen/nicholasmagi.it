@@ -11,9 +11,9 @@ import ContactMe from './pages/ContactMe'
 function App() {
   
   localStorage.setItem("theme", "light")
-  alert("Qui!!")
+
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route index path='/' element={<>
             <Navbar></Navbar>
