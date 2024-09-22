@@ -14,24 +14,24 @@ function ContactMe()
     return <>
         <section id="contact-me" className="pt-20 flex flex-wrap flex-col content-center">
             <h1 className="text-5xl font-bold uppercase text-center">Let's keep in touch!</h1>
-            <form className="mt-10 p-10 flex flex-col gap-5 shadow-2xl rounded-lg">
+            <form className="mt-10 p-10 flex flex-col gap-5 shadow-2xl rounded-lg bg-[--nav-bg]">
                 <div className="flex flex-col sm:flex-row justify-between">
                     <div>
                         <label htmlFor="first_name">First Name</label><br></br>
-                        <input className="bg-[--bg-color] w-full border-slate-300 rounded" id="first_name" type="text"></input>
+                        <input className="bg-[--nav-bg] w-full border-slate-300 rounded" id="first_name" type="text"></input>
                     </div>
                     <div className="mt-3 sm:mt-0">
                         <label htmlFor="surname">Last Name</label><br></br>
-                        <input className="bg-[--bg-color] w-full border-slate-300 rounded" id="surname" type="text"></input>
+                        <input className="bg-[--nav-bg] w-full border-slate-300 rounded" id="surname" type="text"></input>
                     </div>
                 </div>
                 <div>
                     <label htmlFor="first_name">Email</label>
-                    <input className="bg-[--bg-color] w-full border-slate-300 rounded" id="first_name" type="email"></input>
+                    <input className="bg-[--nav-bg] w-full border-slate-300 rounded" id="first_name" type="email"></input>
                 </div>
                 <div>
                     <label htmlFor="first_name">Message</label>
-                    <input className="bg-[--bg-color] w-full min-h-64 border-slate-300 rounded" id="first_name" type="text"></input>
+                    <input className="bg-[--nav-bg] w-full min-h-64 border-slate-300 rounded" id="first_name" type="text"></input>
                 </div>
                 <div className="text-center">
                     <div data-tooltip-target="tooltip-contact-me" data-tooltip-placement="bottom">

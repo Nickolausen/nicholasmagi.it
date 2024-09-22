@@ -12,8 +12,8 @@ export interface ProjectDetails {
     location: string,
     is_source_available: boolean,
     description: string,
-    start_date: string,
-    end_date?: string,
+    start_date: string, // Format: MM/YYYY
+    end_date?: string, // Format: MM/YYYY
     technologies: string[]
 }
 

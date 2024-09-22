@@ -15,7 +15,7 @@ function Navbar()
     return (
         <nav className="flex flex-row justify-center w-screen fixed border-b-2 z-10 bg-[--nav-bg] text-primary">
             <div className="w-screen md:w-auto max-w-screen-xl flex flex-wrap items-center justify-between p-4">
-                <a href="#" className="exclude flex items-center space-x-3 rtl:space-x-reverse pe-20">
+                <a href="#home" className="exclude flex items-center space-x-3 rtl:space-x-reverse pe-20">
                     <span className="self-center text-4xl whitespace-nowrap dark:text-white">
                         <span className="first-letter">N</span>.<span className="first-letter">M</span>. Portfolio
                     </span>
@@ -48,7 +48,7 @@ function Navbar()
                     <ul className="flex flex-col font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
                         <li>
                             <a
-                                href="#"
+                                href="#home"
                                 className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[--accent-color]"
                                 aria-current="page"
                             >

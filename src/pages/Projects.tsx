@@ -45,7 +45,7 @@ function Projects()
             name: "Project Script_Manager",
             company: "NEAT S.R.L",
             location: "Rome, IT",
-            description: "The project aimed to develop a working IDE that could store files in a server, organize them in directories and did have to support multiple languages. I worked in the front-end side, integrating Monaco Editor in Vue.js and providing all the features a VS Code-like editor has.",
+            description: "The project aimed to develop a working IDE that could store files in a server, organize them in directories and did have to support multiple programming languages. I worked in the front-end side, integrating Monaco Editor in Vue.js and providing all the features a VS Code-like editor has.",
             start_date: "04/2023",
             end_date: "04/2023",
             is_source_available: false,

@@ -80,7 +80,7 @@ function Education()
             </div>
             <h2 className="text-4xl font-bold uppercase pt-10">Certifications <span className="text-2xl">& more</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 pt-5 gap-2 text-primary">
-                <div className={styles.grid_cell + " row-span-auto p-6"}>
+                <div className={styles.grid_cell + " row-span-auto p-6 bg-[--bg-color]"}>
                     <div className="text-sm text-gray-500">Issued on: 29/07/2023</div>
                     <div className="text-2xl">Cambridge Advanced English (CAE)</div>
                     <div className="text-xl accent-clr">British School @ Rimini, IT</div>
@@ -122,7 +122,7 @@ function Education()
                     </table>
                 </div>
                 
-                <div className={styles.grid_cell + " row-span-auto"}>
+                <div className={styles.grid_cell + " row-span-auto bg-[--bg-color]"}>
                     <div className="p-6">
                         <div className="text-sm text-gray-500">Issued on: 26/11/2022</div>
                         <div className="text-2xl">"Pizzinelli" Foundation Scholarship</div>
@@ -132,7 +132,7 @@ function Education()
                     <img className="mt-auto" src={import.meta.env.BASE_URL + "imgs/pizzinelli.jpg"} alt="" />
                 </div>
                 {/* MMA */}
-                <div className={styles.grid_cell + " row-span-auto"}>
+                <div className={styles.grid_cell + " row-span-auto bg-[--bg-color]"}>
                     <img className="mb-auto" src={import.meta.env.BASE_URL + "imgs/wisetreeam.jpg"} alt="" />
                     <div className="p-6">
                         <div className="text-sm text-gray-500">Issued on: 05/05/2023</div>
@@ -143,14 +143,14 @@ function Education()
                     </div>
                 </div>
                 {/* WSC */}
-                <div className={styles.grid_cell + " row-span-1 p-6"}>
+                <div className={styles.grid_cell + " row-span-1 p-6 bg-[--bg-color]"}>
                     <div className="text-sm text-gray-500">Issued on: 18/11/2021</div>
                     <div className="text-2xl">Workplace Safety Course</div>
                     <div className="grow"></div>
                     <div className="text-xl accent-clr">"Istituto Tecnico Tecnologico 'Blaise Pascal'" @ Cesena, IT</div>
                 </div>
                 {/* Driving License */}
-                <div className={styles.grid_cell + " lg:col-span-2 row-span-1 p-6"}>
+                <div className={styles.grid_cell + " lg:col-span-2 row-span-1 p-6 bg-[--bg-color]"}>
                     <div className="text-sm text-gray-500">Issued on: 22/05/2023</div>
                     <div className="text-2xl">Driving License B</div>
                     <div className="md:grow"></div>
