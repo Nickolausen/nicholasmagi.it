@@ -14,8 +14,8 @@ function Navbar()
 
     return (
         <nav className="flex flex-row justify-center w-screen fixed border-b-2 z-10 bg-[--nav-bg] text-primary">
-            <div className="w-screen md:w-auto max-w-screen-xl flex flex-wrap items-center justify-between p-4">
-                <a href="#home" className="exclude flex items-center space-x-3 rtl:space-x-reverse pe-20">
+            <div className="w-screen lg:w-auto max-w-screen-xl flex flex-wrap items-center justify-between p-4">
+                <a href="#home" className="exclude flex items-center space-x-3 rtl:space-x-reverse pe-auto lg:pe-20">
                     <span className="self-center text-4xl whitespace-nowrap dark:text-white">
                         <span className="first-letter">N</span>.<span className="first-letter">M</span>. Portfolio
                     </span>
@@ -23,7 +23,7 @@ function Navbar()
                 <button
                     data-collapse-toggle="navbar-solid-bg"
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-solid-bg"
                     aria-expanded="false"
                 >
@@ -44,12 +44,12 @@ function Navbar()
                         />
                     </svg>
                 </button>
-                <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-                    <ul className="flex flex-col font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                <div className="hidden w-full lg:block lg:w-auto" id="navbar-solid-bg">
+                    <ul className="flex flex-col font-medium mt-4 rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-transparent dark:bg-gray-800 lg:dark:bg-transparent dark:border-gray-700">
                         <li>
                             <a
                                 href="#home"
-                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[--accent-color] transition"
+                                className="block align-middle py-2 px-3 lg:p-0 text-primary rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[--accent-color] transition"
                                 aria-current="page"
                             >
                                 Home
@@ -58,7 +58,7 @@ function Navbar()
                         <li>
                             <a
                                 href="#education"
-                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--accent-color] transition dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                className="block align-middle py-2 px-3 lg:p-0 text-primary rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-[--accent-color] transition dark:text-white lg:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
                             >
                                 Education
                             </a>
@@ -66,7 +66,7 @@ function Navbar()
                         <li>
                             <a
                                 href="#projects"
-                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--accent-color] transition dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                className="block align-middle py-2 px-3 lg:p-0 text-primary rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-[--accent-color] transition dark:text-white lg:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
                             >
                                 Projects
                             </a>
@@ -74,18 +74,18 @@ function Navbar()
                         <li>
                             <a
                                 href="#contact-me"
-                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--accent-color] transition dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                className="block align-middle py-2 px-3 lg:p-0 text-primary rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-[--accent-color] transition dark:text-white lg:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
                             >
                                 Contact me
                             </a>
                         </li>
-                        <li className="py-2 ps-3 md:py-0 md:ps-20 flex flex-row gap-5">
+                        <li className="py-2 ps-3 lg:py-0 lg:ps-20 flex flex-row gap-5">
                             {
                                 contact_tabs.map(it => it.item)
                             }
                         </li>
                         {/* TODO: Theme Switcher */}
-                        {/* <li className="flex py-2 ps-3 md:py-0">
+                        {/* <li className="flex py-2 ps-3 lg:py-0">
                             <ThemeSwitcher/>
                         </li> */}
                     </ul>
