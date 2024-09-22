@@ -20,8 +20,8 @@ function InitialScreen() {
                         </div>
                     </div>
                     <div className='order-first xl:order-last flex justify-center pt-[10em] xl:pt-0'>
-                        <div className='relative'>
-                            <img className='max-w-64 lg:max-w-96 rounded-lg' src={import.meta.env.BASE_URL + "profile.jpg"} alt="Profile Picture" />
+                        <div className='relative shadow-2xl'>
+                            <img className='max-w-64 lg:max-w-96 rounded-lg shadow-2xl' src={import.meta.env.BASE_URL + "profile.jpg"} alt="Profile Picture" />
                             {/* <div className='h-10 absolute bg-[--accent-color] bottom-0 w-full flex justify-center content-center'>All work and no play makes Jack a dull boy</div> */}
                         </div>
                     </div>

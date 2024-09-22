@@ -49,7 +49,7 @@ function Navbar()
                         <li>
                             <a
                                 href="#home"
-                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[--accent-color]"
+                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[--accent-color] transition"
                                 aria-current="page"
                             >
                                 Home
@@ -58,7 +58,7 @@ function Navbar()
                         <li>
                             <a
                                 href="#education"
-                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--accent-color] dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--accent-color] transition dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             >
                                 Education
                             </a>
@@ -66,7 +66,7 @@ function Navbar()
                         <li>
                             <a
                                 href="#projects"
-                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--accent-color] dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--accent-color] transition dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             >
                                 Projects
                             </a>
@@ -74,7 +74,7 @@ function Navbar()
                         <li>
                             <a
                                 href="#contact-me"
-                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--accent-color] dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                className="block align-middle py-2 px-3 md:p-0 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--accent-color] transition dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             >
                                 Contact me
                             </a>
