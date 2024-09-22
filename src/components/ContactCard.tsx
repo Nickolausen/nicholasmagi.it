@@ -1,4 +1,4 @@
-function ContactCard(id: number, tooltipText: string, link: string, size: any, path: string) 
+function ContactCard(id: number, tooltipText: string, link: string, size: any, path: string)
 {
     return <>
         <a className="exclude" href={link} target="_parent" data-tooltip-target={"tooltip-bottom" + id} data-tooltip-placement="bottom">

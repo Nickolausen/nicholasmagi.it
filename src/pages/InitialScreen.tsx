@@ -12,7 +12,7 @@ function InitialScreen() {
                         <div className='text-4xl'><span className='italic'>Aspirant</span> Web & Software Developer</div>
                         <div className='text-xl lg:text-2xl text-gray-500 pb-10'>Computer Science Undergraduate @ University of Bologna, IT</div>
                         <div className='w-fit' data-tooltip-target="tooltip-cv" data-tooltip-placement="bottom">
-                            <Button id='tooltip-cv' classNames='opacity-[.5]' text='Download my resume'/>
+                            <Button id='tooltip-cv' classNames='opacity-[.5]' text='Download my resume' isDisabled={true}/>
                             <div id={"tooltip-cv"} role="tooltip" className="absolute z-5 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-yellow-400 rounded-lg shadow-lg opacity-0 tooltip dark:bg-gray-700">
                                 <i className='fa fa-warning bg-transparent'></i> Not available at the moment, check my LinkedIn!
                                 <div className="tooltip-arrow" data-popper-arrow></div>

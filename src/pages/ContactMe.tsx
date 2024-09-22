@@ -35,7 +35,7 @@ function ContactMe()
                 </div>
                 <div className="text-center">
                     <div data-tooltip-target="tooltip-contact-me" data-tooltip-placement="bottom">
-                        <Button classNames="opacity-[.5]" text={"Send Message"} fa_icon_id="fa-paper-plane"></Button>
+                        <Button isDisabled={true} classNames="opacity-[.5]" text={"Send Message"} fa_icon_id="fa-paper-plane"></Button>
                     </div>
                     <div id={"tooltip-contact-me"} role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-yellow-400 rounded-lg shadow-lg opacity-0 tooltip dark:bg-gray-700">
                         <i className='fa fa-warning bg-transparent'></i> I'm still looking for a better alternative to 'href=mailto:...'
