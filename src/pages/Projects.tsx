@@ -71,7 +71,7 @@ function Projects()
         <section id="projects" className="pt-20">
             <h1 className="text-5xl font-bold uppercase">Projects</h1>
             <h3 className="text-primary text-3xl font-bold uppercase mt-10"><i className="fa fa-chevron-right"></i> From my GitHub's pinned repositories</h3>
-            <div className="pt-8 grid md:grid-cols-2 2xl:grid-cols-4 gap-5 gap-y-8 text-primary">
+            <div className="pt-8 grid md:grid-cols-2 2xl:grid-cols-3 gap-5 gap-y-8 text-primary">
                 { 
                     repos.map<ReactNode>((repo: GHRepoDetails, idx: number) => <GHRepoCard key={idx} data={repo}/>)
                 }

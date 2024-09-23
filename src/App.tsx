@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route index path='/' element={<>
             <Navbar></Navbar>
-            <div className='px-10 xl:px-[10rem]'>
+            <div className='px-10 lg:px-[10rem] 2xl:px-[25rem]'>
               <InitialScreen></InitialScreen>
               <Education></Education>
               <Projects></Projects>
