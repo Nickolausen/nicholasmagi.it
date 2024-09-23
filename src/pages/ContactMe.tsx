@@ -13,7 +13,7 @@ function ContactMe()
 {
     return <>
         <section id="contact-me" className="pt-20 flex flex-wrap flex-col content-center">
-            <h1 className="text-5xl font-bold uppercase text-center">Let's keep in touch!</h1>
+            <h1 className="text-center text-5xl font-bold uppercase ">Let's keep in touch!</h1>
             <form className="mt-10 p-10 flex flex-col gap-5 shadow-2xl rounded-lg bg-[--nav-bg]">
                 <div className="flex flex-col sm:flex-row justify-between">
                     <div>
@@ -27,11 +27,11 @@ function ContactMe()
                 </div>
                 <div>
                     <label htmlFor="first_name">Email</label>
-                    <input className="bg-[--nav-bg] w-full border-slate-300 rounded" id="first_name" type="email"></input>
+                    <input className="bg-[--nav-bg] w-full border-slate-300 rounded" id="email" type="email"></input>
                 </div>
                 <div>
                     <label htmlFor="first_name">Message</label>
-                    <input className="bg-[--nav-bg] w-full min-h-64 border-slate-300 rounded" id="first_name" type="text"></input>
+                    <textarea className="bg-[--nav-bg] w-full min-h-64 border-slate-300 rounded resize-none" id="message"></textarea>
                 </div>
                 <div className="text-center">
                     <div data-tooltip-target="tooltip-contact-me" data-tooltip-placement="bottom">

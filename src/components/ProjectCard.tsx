@@ -37,7 +37,7 @@ export default function ProjectCard( { project_info }: IProps)
 
     return <>
         <div className="w-full shadow-xl flex items-center flex-col md:flex-row rounded-lg bg-red  hover:scale-[1.02] transition bg-[--bg-color]">
-            <div className="h-full w-full flex justify-center items-center bg-white py-3 md:py-0 rounded-l-lg"> { /* Image container */}
+            <div className="w-full md:w-auto md:min-w-2xl h-full flex justify-center items-center bg-white py-3 md:py-0 rounded-l-lg"> { /* Image container */}
                 <img className="max-w-64 lg:max-w-96 rounded-lg px-2" src={import.meta.env.BASE_URL + "imgs/projects/" + img_id + ".png"} alt="" />
             </div>
             <div className="p-5  h-full flex flex-col justify-between">
@@ -46,7 +46,7 @@ export default function ProjectCard( { project_info }: IProps)
                     <h4 className="text-xl"><span className="accent-clr">{project_info?.company} @ {project_info?.location}</span> <span className="text-gray-600">- from {start_month} {start_year} {end_year ? <>{"to " + end_month + " " + end_year}</> : <>&#8212; ongoing</>}</span></h4>
                     <p className="mt-3 text-pretty">{project_info?.description}</p>
                 </div>
-                <div className="flex flex-row gap-5">
+                <div className="flex flex-row gap-5 flex-wrap">
                     {
                         project_info?.technologies.map<ReactNode>((tec: string) => {
                             let tooltip_tec_id: string = tec + img_id
