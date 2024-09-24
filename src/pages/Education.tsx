@@ -42,7 +42,7 @@ const educationHistory: EducationTitle[] = [{
      }, 
     {
         start_year: 2023,
-        end_year: 2026,
+        end_year: 2027,
         title_description: "Bachelor Degree in Computer Science and Engineering",
         school: "Alma Mater Studiorum, University of Bologna @ Cesena, IT",
         grade: NaN,
