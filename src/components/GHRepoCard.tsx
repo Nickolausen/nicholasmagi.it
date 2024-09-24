@@ -9,7 +9,7 @@ function GHRepoCard({ data }: IProps ) {
     let tooltip_id = "tooltip-" + data.name + data.language
 
     return <>
-        <article className='bg-[--bg-color] flex flex-col flex-wrap content-center justify-between shadow-xl rounded-lg hover:scale-[1.02] transition'>
+        <article className='bg-[--bg-color] flex flex-col flex-wrap content-center justify-between shadow-xl rounded-lg hover:scale-[1.02] hover:shadow-2xl transition'>
             <div className='p-6 w-full'>
                 {/* <img src={template_img}></img> */}
                 <div className='py-2 flex justify-between content-center'>

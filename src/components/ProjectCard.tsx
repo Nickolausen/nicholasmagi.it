@@ -36,7 +36,7 @@ export default function ProjectCard( { project_info }: IProps)
     let img_id: string = project_info?.name.toLowerCase().replace(" ", "_")!!
 
     return <>
-        <div className="w-full shadow-xl flex items-center flex-col md:flex-row rounded-lg bg-red  hover:scale-[1.02] transition bg-[--bg-color]">
+        <div className="w-full shadow-xl flex items-center flex-col md:flex-row rounded-lg bg-red hover:shadow-2xl hover:scale-[1.02] transition bg-[--bg-color]">
             <div className="w-full md:w-auto md:min-w-2xl h-full flex justify-center items-center bg-white py-3 md:py-0 rounded-l-lg"> { /* Image container */}
                 <img className="max-w-64 lg:max-w-96 rounded-lg px-2" src={import.meta.env.BASE_URL + "imgs/projects/" + img_id + ".png"} alt="" />
             </div>
