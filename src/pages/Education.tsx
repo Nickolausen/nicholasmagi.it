@@ -223,7 +223,7 @@ function Education()
                     </div> 
                     <h3 className="mt-5 text-2xl text-center font-bold w-full">Learnt from School</h3>
                     <hr className="my-3"></hr>
-                    <table>
+                    <table className="mt-5">
                         { 
                             from_school.map(item => 
                                 <tr className="text-xl">
