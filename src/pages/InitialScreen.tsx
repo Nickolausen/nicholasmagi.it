@@ -1,13 +1,8 @@
 // import profile_picture from '../assets/media/profile.jpg'
-import { useState } from 'react'
 import Button from '../components/Button'
 
 function InitialScreen() {
-
-    const [isCVLoaded, setIsCVLoaded] = useState(true)
-
-    setIsCVLoaded(true)
-
+    let isCVLoaded = true
     return (
         <>
             <div className='flex flex-col justify-center items-center'>
