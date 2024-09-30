@@ -1,7 +1,11 @@
 // import profile_picture from '../assets/media/profile.jpg'
+import { useState } from 'react'
 import Button from '../components/Button'
 
 function InitialScreen() {
+
+    const [isCVLoaded, setIsCVLoaded] = useState(true)
+
     return (
         <>
             <div className='flex flex-col justify-center items-center'>
@@ -12,11 +16,18 @@ function InitialScreen() {
                         <div className='text-4xl'><span className='italic'>Aspirant</span> Web & Software Developer</div>
                         <div className='text-xl lg:text-2xl text-gray-500 pb-10'>Computer Science Undergraduate @ University of Bologna, IT</div>
                         <div className='w-fit' data-tooltip-target="tooltip-cv" data-tooltip-placement="bottom">
-                            <Button id='tooltip-cv' classNames='opacity-[.5]' text='Download my resume' isDisabled={true}/>
-                            <div id={"tooltip-cv"} role="tooltip" className="absolute z-5 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-yellow-400 rounded-lg shadow-lg opacity-0 tooltip dark:bg-gray-700">
-                                <i className='fa fa-warning bg-transparent'></i> Not available at the moment, check my LinkedIn!
-                                <div className="tooltip-arrow" data-popper-arrow></div>
-                            </div>
+                            <a className='exclude' href={import.meta.env.BASE_URL + "CV-Nicholas-Magi.pdf"}>
+                                <Button fa_icon_id='fa-file' id='tooltip-cv' text='Check my resume' isDisabled={!isCVLoaded}/>
+                            </a>
+                            {
+                                isCVLoaded ? 
+                                    <>
+                                    </> :
+                                    <div id={"tooltip-cv"} role="tooltip" className="absolute z-5 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-yellow-400 rounded-lg shadow-lg opacity-0 tooltip dark:bg-gray-700">
+                                        <i className='fa fa-warning bg-transparent'></i> Not available at the moment, check my LinkedIn!
+                                        <div className="tooltip-arrow" data-popper-arrow></div>
+                                    </div>
+                            }
                         </div>
                     </div>
                     <div className='order-first xl:order-last flex justify-center pt-[7em] xl:pt-0'>
