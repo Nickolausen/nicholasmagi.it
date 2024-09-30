@@ -6,6 +6,8 @@ function InitialScreen() {
 
     const [isCVLoaded, setIsCVLoaded] = useState(true)
 
+    setIsCVLoaded(true)
+
     return (
         <>
             <div className='flex flex-col justify-center items-center'>
