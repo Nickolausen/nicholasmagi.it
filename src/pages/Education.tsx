@@ -3,27 +3,25 @@ import { EducationTitle, Expertise } from "../data/Education"
 import styles from './Education.module.css'
 
 const from_school = [
-    {name: "C", expertise: Expertise.Intermediate},
-    {name: "C#", expertise: Expertise.Intermediate},
-    {name: "Blazor", expertise: Expertise.Beginner},
-    {name: "Java", expertise: Expertise.Beginner},
-    {name: "Bash", expertise: Expertise.Beginner},
-    {name: "Design a WPF", expertise: Expertise.Intermediate},
-    {name: "JavaScript & JQuery", expertise: Expertise.Intermediate},
-    {name: "HTML", expertise: Expertise.Excellent},
-    {name: "CSS & Bootstrap", expertise: Expertise.Excellent},
-    {name: "SQL", expertise: Expertise.Intermediate},
-    {name: "Design in Figma", expertise: Expertise.Intermediate},
-    {name: "Design a network w/CISCO Packet Tracer", expertise: Expertise.Beginner},
+    { name: "Peni", expertise: Expertise.Intermediate },
+    { name: "Ciole", expertise: Expertise.Intermediate },
+    { name: "Cazzi", expertise: Expertise.Beginner },
+    { name: "Piselli", expertise: Expertise.Beginner },
+    { name: "Falli", expertise: Expertise.Beginner },
+    { name: "Prepuzi", expertise: Expertise.Intermediate },
+    { name: "Pudenda", expertise: Expertise.Intermediate },
+    { name: "Staffe", expertise: Expertise.Excellent },
+    { name: "Cappelle", expertise: Expertise.Excellent },
+    { name: "Platani", expertise: Expertise.Intermediate },
 ]
 
 const self_taught = [
-    {name: "Python", expertise: Expertise.Beginner},
-    {name: "Manim - python library", expertise: Expertise.Intermediate},
-    {name: "React", expertise: Expertise.Beginner},
-    {name: "Vue", expertise: Expertise.Beginner},
-    {name: "Tailwind CSS", expertise: Expertise.Intermediate},
-    {name: "Typescript", expertise: Expertise.Beginner},
+    { name: "Apprezzamento del fica", expertise: Expertise.Beginner },
+    { name: "Gay", expertise: Expertise.Intermediate },
+    { name: "Maschioni", expertise: Expertise.Beginner },
+    { name: "Omacci", expertise: Expertise.Beginner },
+    { name: "Bellimbusti", expertise: Expertise.Intermediate },
+    { name: "Manzoni", expertise: Expertise.Beginner },
 ]
 
 const expertise_strings: String[] = []
@@ -32,28 +30,27 @@ expertise_strings[Expertise.Intermediate] = "Intermediate"
 expertise_strings[Expertise.Excellent] = "Excellent"
 
 const educationHistory: EducationTitle[] = [{
-        start_year: 2018,
-        end_year: 2023,
-        title_description: "High School Diploma in Computer Science and Telecommunications",
-        school: "Istituto Tecnico Tecnologico 'B. Pascal' @ Cesena, IT",
-        grade: 100,
-        max_grade: 100,
-        withHonours: true
-     }, 
-    {
-        start_year: 2023,
-        end_year: 2027,
-        title_description: "Bachelor Degree in Computer Science and Engineering",
-        school: "Alma Mater Studiorum, University of Bologna @ Cesena, IT",
-        grade: NaN,
-        max_grade: 110,
-        withHonours: false
-    }]
+    start_year: 2018,
+    end_year: 2023,
+    title_description: "High School Diploma in Peni e Prepuzi",
+    school: "Istituto Tecnico Tecnologico 'B. Pascal' @ Cesena, IT",
+    grade: 100,
+    max_grade: 100,
+    withHonours: true
+},
+{
+    start_year: 2023,
+    end_year: 2027,
+    title_description: "Bachelor Degree in Apprezzamento di Ciole",
+    school: "Alma Mater Studiorum, University of Bologna @ Cesena, IT",
+    grade: NaN,
+    max_grade: 110,
+    withHonours: false
+}]
 
 educationHistory.sort((a, b) => (a.start_year > b.start_year) ? -1 : 1)
 
-function Education() 
-{
+function Education() {
     return (
         <section id='education' className="pt-20">
             <h1 className="text-5xl font-bold uppercase">Education</h1>
@@ -65,24 +62,24 @@ function Education()
                                 <EducationCard key={idx} data={ed}></EducationCard>
                             </div>
                             <div className="w-100 flex justify-center">
-                                <div className="rounded" style={{height: 90 + "px", borderLeft: 6 + "px solid var(--accent-color)"}}></div>
+                                <div className="rounded" style={{ height: 90 + "px", borderLeft: 6 + "px solid var(--accent-color)" }}></div>
                             </div>
                             {
                                 (idx === educationHistory.length - 1) ? <>
                                     <div className="w-100 flex justify-center">
-                                        <div className="rounded" style={{height: 30 + "px", borderLeft: 6 + "px dotted var(--accent-color)"}}></div>
+                                        <div className="rounded" style={{ height: 30 + "px", borderLeft: 6 + "px dotted var(--accent-color)" }}></div>
                                     </div></> : <></>
                             }
                         </>
-                        })
-                }                
+                    })
+                }
 
             </div>
             <h2 className="text-4xl font-bold uppercase pt-10">Certifications <span className="text-2xl">& more</span></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 pt-5 gap-2 text-primary">
                 <div className={styles.grid_cell + " row-span-auto p-6 bg-[--bg-color]"}>
                     <div className="text-sm text-gray-500">Issued on: 29/07/2023</div>
-                    <div className="text-2xl">Cambridge Advanced English (CAE)</div>
+                    <div className="text-2xl">Cambridge Advanced Penis (CAP)</div>
                     <div className="text-xl accent-clr">British School @ Rimini, IT</div>
                     <div className="mt-5 flex flex-row justify-between">
                         <div className="font-bold text-2xl">C1 Level</div>
@@ -121,11 +118,11 @@ function Education()
                         </tr>
                     </table>
                 </div>
-                
+
                 <div className={styles.grid_cell + " row-span-auto bg-[--bg-color]"}>
                     <div className="p-6">
                         <div className="text-sm text-gray-500">Issued on: 26/11/2022</div>
-                        <div className="text-2xl">"Pizzinelli" Foundation Scholarship</div>
+                        <div className="text-2xl">"Pipponi" Foundation Scholarship</div>
                         <div className="grow"></div>
                         <div className="text-xl accent-clr">'Marco Pizzinelli' Foundation @ Cesena, IT</div>
                     </div>
@@ -136,10 +133,10 @@ function Education()
                     <img className="mb-auto" src={import.meta.env.BASE_URL + "imgs/wisetreeam.jpg"} alt="" />
                     <div className="p-6">
                         <div className="text-sm text-gray-500">Issued on: 05/05/2023</div>
-                        <div className="text-2xl">3rd Place "Metodi Matematici per l'Animazione"</div>
+                        <div className="text-2xl">3rd Place "Metodi Matematici per tirarsi segoni"</div>
                         <div className="text-xl accent-clr">Alma Mater Studiorum, University of Bologna @ Department of Mathematics</div>
                         <div className="grow"></div>
-                        <div className="text-pretty mt-6">We reached the 3rd place developing the game <a target="_blank" className="accent-clr" href="https://github.com/lspita/MMA-2023"><i className="fa fa-link"></i> 'CON NOME' - Minigolf randomico</a> - using <span className="font-bold">BabylonJS</span> and <span className="font-bold">TypeScript</span>.</div>
+                        <div className="text-pretty mt-6">We reached the 3rd place developing a new frontier of fapping <a target="_blank" className="accent-clr" href="https://github.com/lspita/MMA-2023"><i className="fa fa-link"></i> 'CON NOME' - Minigolf randomico</a> - using <span className="font-bold">BabylonJS</span> and <span className="font-bold">TypeScript</span>.</div>
                     </div>
                 </div>
                 {/* WSC */}
@@ -152,19 +149,19 @@ function Education()
                 {/* Driving License */}
                 <div className={styles.grid_cell + " lg:col-span-2 row-span-1 p-6 bg-[--bg-color]"}>
                     <div className="text-sm text-gray-500">Issued on: 22/05/2023</div>
-                    <div className="text-2xl">Driving License B</div>
+                    <div className="text-2xl">Driving License B(occhini)</div>
                     <div className="md:grow"></div>
                     <div className="mt-3 text-xl">Can drive: </div>
                     <div className="flex flex-row justify-between mt-5">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-                                <path d="M7 13.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5zm9 1c0-.276-.224-.5-.5-.5h-7c-.276 0-.5.224-.5.5s.224.5.5.5h7c.276 0 .5-.224.5-.5zm4-1c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5zm-17.298-6.5h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.318 3.168c-.761-1.413-1.699-3.17-2.684-4.812-.786-1.312-1.37-1.938-2.751-2.187-1.395-.25-2.681-.347-4.585-.347s-3.19.097-4.585.347c-1.381.248-1.965.875-2.751 2.187-.981 1.637-1.913 3.382-2.684 4.812-.687 1.273-.98 2.412-.98 3.806 0 1.318.42 2.415 1 3.817v2.209c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-2.209c.58-1.403 1-2.499 1-3.817 0-1.394-.293-2.533-.98-3.806zm-15.641-3.784c.67-1.117.852-1.149 1.39-1.246 1.268-.227 2.455-.316 4.231-.316s2.963.088 4.231.316c.538.097.72.129 1.39 1.246.408.681.81 1.388 1.195 2.081-1.456.22-4.02.535-6.816.535-3.048 0-5.517-.336-6.805-.555.382-.686.779-1.386 1.184-2.061zm11.595 10.616h-11.948c-1.671 0-3.026-1.354-3.026-3.026 0-1.641.506-2.421 1.184-3.678 1.041.205 3.967.704 7.816.704 3.481 0 6.561-.455 7.834-.672.664 1.231 1.166 2.01 1.166 3.646 0 1.672-1.355 3.026-3.026 3.026zm5.526-10c.276 0 .5.224.5.5v.511c0 .793-.926.989-1.616.989l-1.086-2h2.202z"/>
+                                <path d="M7 13.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5zm9 1c0-.276-.224-.5-.5-.5h-7c-.276 0-.5.224-.5.5s.224.5.5.5h7c.276 0 .5-.224.5-.5zm4-1c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5zm-17.298-6.5h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.318 3.168c-.761-1.413-1.699-3.17-2.684-4.812-.786-1.312-1.37-1.938-2.751-2.187-1.395-.25-2.681-.347-4.585-.347s-3.19.097-4.585.347c-1.381.248-1.965.875-2.751 2.187-.981 1.637-1.913 3.382-2.684 4.812-.687 1.273-.98 2.412-.98 3.806 0 1.318.42 2.415 1 3.817v2.209c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-2.209c.58-1.403 1-2.499 1-3.817 0-1.394-.293-2.533-.98-3.806zm-15.641-3.784c.67-1.117.852-1.149 1.39-1.246 1.268-.227 2.455-.316 4.231-.316s2.963.088 4.231.316c.538.097.72.129 1.39 1.246.408.681.81 1.388 1.195 2.081-1.456.22-4.02.535-6.816.535-3.048 0-5.517-.336-6.805-.555.382-.686.779-1.386 1.184-2.061zm11.595 10.616h-11.948c-1.671 0-3.026-1.354-3.026-3.026 0-1.641.506-2.421 1.184-3.678 1.041.205 3.967.704 7.816.704 3.481 0 6.561-.455 7.834-.672.664 1.231 1.166 2.01 1.166 3.646 0 1.672-1.355 3.026-3.026 3.026zm5.526-10c.276 0 .5.224.5.5v.511c0 .793-.926.989-1.616.989l-1.086-2h2.202z" />
                             </svg>
                             <div className="text-center">Car</div>
                         </div>
                         <div>
                             <svg fill="#000000" height="50" width="50" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.001 490.001" >
-                            <path d="M410.689,235.919c-14.154,0-27.443,3.744-38.96,10.268l-20.528-27.251c26.069-19.054,52.85-27.796,55.161-28.526
+                                <path d="M410.689,235.919c-14.154,0-27.443,3.744-38.96,10.268l-20.528-27.251c26.069-19.054,52.85-27.796,55.161-28.526
                                 c2.881-0.916,5.223-3.034,6.424-5.794c1.201-2.769,1.15-5.925-0.153-8.644c-35.267-73.853-89.95-80.237-92.262-80.472
                                 c-4.429-0.438-8.471,1.853-10.394,5.732c-1.935,3.889-1.253,8.563,1.699,11.749c6.486,6.964,9.173,14.499,8.207,23.04
                                 c-0.418,3.72-1.502,7.509-3.085,11.297c-59.498-19.458-97.449,8.263-110.85,20.886c-33.22-11.701-63.089-17.613-89.272-17.613
@@ -218,32 +215,32 @@ function Education()
                 <div className="flex flex-wrap flex-col content-center lg:px-10">
                     <div className="flex justify-center">
                         <svg width="100" height="100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                            <path d="M22 21c.53 0 1.039.211 1.414.586.376.375.586.884.586 1.414v1h-6v-1c0-1.104.896-2 2-2h2zm-7 0c.53 0 1.039.211 1.414.586.376.375.586.884.586 1.414v1h-6v-1c0-1.104.896-2 2-2h2zm7 1h-2c-.551 0-1 .448-1 1h4c0-.564-.461-1-1-1zm-7 0h-2c-.551 0-1 .448-1 1h4c0-.564-.461-1-1-1zm-6.758-1.216c-.025.679-.576 1.21-1.256 1.21-.64 0-1.179-.497-1.254-1.156l-.406-4.034-.317 4.019c-.051.656-.604 1.171-1.257 1.171-.681 0-1.235-.531-1.262-1.21l-.262-6.456-.308.555c-.241.437-.8.638-1.265.459-.404-.156-.655-.538-.655-.951 0-.093.012-.188.039-.283l1.134-4.098c.17-.601.725-1.021 1.351-1.021h4.096c.511 0 1.012-.178 1.285-.33.723-.403 2.439-1.369 3.136-1.793.394-.243.949-.147 1.24.217.32.396.286.95-.074 1.297l-3.048 2.906c-.375.359-.595.849-.617 1.381-.061 1.397-.3 8.117-.3 8.117zm-5.718-10.795c-.18 0-.34.121-.389.294-.295 1.04-1.011 3.666-1.134 4.098l1.511-2.593c.172-.295.623-.18.636.158l.341 8.797c.01.278.5.287.523.002 0 0 .269-3.35.308-3.944.041-.599.449-1.017.992-1.017.547.002.968.415 1.029 1.004.036.349.327 3.419.385 3.938.043.378.505.326.517.022 0 0 .239-6.725.3-8.124.033-.791.362-1.523.925-2.061l3.045-2.904c-.661.492-2.393 1.468-3.121 1.873-.396.221-1.07.457-1.772.457h-4.096zm18.476 6.011c-1.305 0-2.364 1.06-2.364 2.364 0 1.305 1.059 2.365 2.364 2.365s2.364-1.06 2.364-2.365c0-1.304-1.059-2.364-2.364-2.364zm-7 0c-1.305 0-2.364 1.06-2.364 2.364 0 1.305 1.059 2.365 2.364 2.365s2.364-1.06 2.364-2.365c0-1.304-1.059-2.364-2.364-2.364zm7 1c.752 0 1.364.612 1.364 1.364 0 .753-.612 1.365-1.364 1.365-.752 0-1.364-.612-1.364-1.365 0-.752.612-1.364 1.364-1.364zm-7 0c.752 0 1.364.612 1.364 1.364 0 .753-.612 1.365-1.364 1.365-.752 0-1.364-.612-1.364-1.365 0-.752.612-1.364 1.364-1.364zm10-2h-14.658v-1h7.658v-1h3v1h3v-13h-22v7l-1 3v-11h24v15zm-6-6h-4v-1h4v1zm-12.727-5c-1.278 0-2.315 1.038-2.315 2.316 0 1.278 1.037 2.316 2.315 2.316s2.316-1.038 2.316-2.316c0-1.278-1.038-2.316-2.316-2.316zm0 1c.726 0 1.316.59 1.316 1.316 0 .726-.59 1.316-1.316 1.316-.725 0-1.315-.59-1.315-1.316 0-.726.59-1.316 1.315-1.316zm15.727 2h-7v-1h7v1zm0-2h-7v-1h7v1z"/>
+                            <path d="M22 21c.53 0 1.039.211 1.414.586.376.375.586.884.586 1.414v1h-6v-1c0-1.104.896-2 2-2h2zm-7 0c.53 0 1.039.211 1.414.586.376.375.586.884.586 1.414v1h-6v-1c0-1.104.896-2 2-2h2zm7 1h-2c-.551 0-1 .448-1 1h4c0-.564-.461-1-1-1zm-7 0h-2c-.551 0-1 .448-1 1h4c0-.564-.461-1-1-1zm-6.758-1.216c-.025.679-.576 1.21-1.256 1.21-.64 0-1.179-.497-1.254-1.156l-.406-4.034-.317 4.019c-.051.656-.604 1.171-1.257 1.171-.681 0-1.235-.531-1.262-1.21l-.262-6.456-.308.555c-.241.437-.8.638-1.265.459-.404-.156-.655-.538-.655-.951 0-.093.012-.188.039-.283l1.134-4.098c.17-.601.725-1.021 1.351-1.021h4.096c.511 0 1.012-.178 1.285-.33.723-.403 2.439-1.369 3.136-1.793.394-.243.949-.147 1.24.217.32.396.286.95-.074 1.297l-3.048 2.906c-.375.359-.595.849-.617 1.381-.061 1.397-.3 8.117-.3 8.117zm-5.718-10.795c-.18 0-.34.121-.389.294-.295 1.04-1.011 3.666-1.134 4.098l1.511-2.593c.172-.295.623-.18.636.158l.341 8.797c.01.278.5.287.523.002 0 0 .269-3.35.308-3.944.041-.599.449-1.017.992-1.017.547.002.968.415 1.029 1.004.036.349.327 3.419.385 3.938.043.378.505.326.517.022 0 0 .239-6.725.3-8.124.033-.791.362-1.523.925-2.061l3.045-2.904c-.661.492-2.393 1.468-3.121 1.873-.396.221-1.07.457-1.772.457h-4.096zm18.476 6.011c-1.305 0-2.364 1.06-2.364 2.364 0 1.305 1.059 2.365 2.364 2.365s2.364-1.06 2.364-2.365c0-1.304-1.059-2.364-2.364-2.364zm-7 0c-1.305 0-2.364 1.06-2.364 2.364 0 1.305 1.059 2.365 2.364 2.365s2.364-1.06 2.364-2.365c0-1.304-1.059-2.364-2.364-2.364zm7 1c.752 0 1.364.612 1.364 1.364 0 .753-.612 1.365-1.364 1.365-.752 0-1.364-.612-1.364-1.365 0-.752.612-1.364 1.364-1.364zm-7 0c.752 0 1.364.612 1.364 1.364 0 .753-.612 1.365-1.364 1.365-.752 0-1.364-.612-1.364-1.365 0-.752.612-1.364 1.364-1.364zm10-2h-14.658v-1h7.658v-1h3v1h3v-13h-22v7l-1 3v-11h24v15zm-6-6h-4v-1h4v1zm-12.727-5c-1.278 0-2.315 1.038-2.315 2.316 0 1.278 1.037 2.316 2.315 2.316s2.316-1.038 2.316-2.316c0-1.278-1.038-2.316-2.316-2.316zm0 1c.726 0 1.316.59 1.316 1.316 0 .726-.59 1.316-1.316 1.316-.725 0-1.315-.59-1.315-1.316 0-.726.59-1.316 1.315-1.316zm15.727 2h-7v-1h7v1zm0-2h-7v-1h7v1z" />
                         </svg>
-                    </div> 
+                    </div>
                     <h3 className="mt-5 text-2xl text-center font-bold w-full">Learnt from School</h3>
                     <hr className="my-3"></hr>
                     <table className="mt-5">
-                        { 
-                            from_school.map(item => 
+                        {
+                            from_school.map(item =>
                                 <tr className="text-xl">
                                     <td className="pe-10">{item.name}</td>
                                     <td className="text-end accent-clr">{expertise_strings[item.expertise]}</td>
                                 </tr>)
                         }
                     </table>
-                </div> 
+                </div>
                 <div className="mt-10 lg:mt-0 flex flex-wrap flex-col content-center lg:px-10">
                     <div className="flex justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24">
-                            <path d="M21.06 11.91c0 .232-.012.432-.025.628-.503-1.725-1.315-2.131-3.413-2.688 3.438 0 3.438.847 3.438 2.06zm2.94-3.195v1.462c-.328.276-.999.447-1.001 1.418-.006 3.827-1.588 4.387-4.604 4.405-4.05 0-4.597-.927-5.273-4.148-.15-.715-.513-1.148-1.122-1.148s-.972.434-1.122 1.148c-.677 3.221-1.224 4.148-5.274 4.148-2.428-.015-3.925-.384-4.419-2.522.383.104.775.191 1.144.264.444.986 1.406 1.248 3.28 1.258 3.608.026 3.736-.754 4.297-3.416.151-.72.119-1.244-.097-1.556-.404-.587-1.585-1.028-3.51-1.028-1.99 0-3.053.229-3.627.623-.938-.092-1.859-.561-2.116-1.01 1.784-.337 3.821-.613 5.743-.613 3.24 0 3.525.934 5.701.923 2.176.011 2.465-.923 5.701-.923 2.119 0 4.397.332 6.299.715zm-2 2.859c0-1.516 0-2.574-4.299-2.574-1.925 0-3.106.441-3.511 1.028-.216.312-.248.836-.097 1.556.561 2.661.688 3.442 4.297 3.416 2.84-.017 3.61-.57 3.61-3.426zm-14-.574h-3.219v2h3.219v-2zm-4-.078v2.078c-.613-.075-2.402-.347-3.438-.776-.34-.141-.562-.473-.562-.841v-1.909c.812.828 1.891 1.026 4 1.448zm-2.078.453c0-.276-.225-.5-.501-.5-.275 0-.499.224-.499.5s.224.5.499.5c.276 0 .501-.224.501-.5z"/>
+                            <path d="M21.06 11.91c0 .232-.012.432-.025.628-.503-1.725-1.315-2.131-3.413-2.688 3.438 0 3.438.847 3.438 2.06zm2.94-3.195v1.462c-.328.276-.999.447-1.001 1.418-.006 3.827-1.588 4.387-4.604 4.405-4.05 0-4.597-.927-5.273-4.148-.15-.715-.513-1.148-1.122-1.148s-.972.434-1.122 1.148c-.677 3.221-1.224 4.148-5.274 4.148-2.428-.015-3.925-.384-4.419-2.522.383.104.775.191 1.144.264.444.986 1.406 1.248 3.28 1.258 3.608.026 3.736-.754 4.297-3.416.151-.72.119-1.244-.097-1.556-.404-.587-1.585-1.028-3.51-1.028-1.99 0-3.053.229-3.627.623-.938-.092-1.859-.561-2.116-1.01 1.784-.337 3.821-.613 5.743-.613 3.24 0 3.525.934 5.701.923 2.176.011 2.465-.923 5.701-.923 2.119 0 4.397.332 6.299.715zm-2 2.859c0-1.516 0-2.574-4.299-2.574-1.925 0-3.106.441-3.511 1.028-.216.312-.248.836-.097 1.556.561 2.661.688 3.442 4.297 3.416 2.84-.017 3.61-.57 3.61-3.426zm-14-.574h-3.219v2h3.219v-2zm-4-.078v2.078c-.613-.075-2.402-.347-3.438-.776-.34-.141-.562-.473-.562-.841v-1.909c.812.828 1.891 1.026 4 1.448zm-2.078.453c0-.276-.225-.5-.501-.5-.275 0-.499.224-.499.5s.224.5.499.5c.276 0 .501-.224.501-.5z" />
                         </svg>
                     </div>
                     <h3 className="mt-5 text-2xl text-center font-bold w-full">Self-taught</h3>
                     <hr className="my-3"></hr>
                     <table className="mt-5">
-                        { 
-                            self_taught.map(item => 
+                        {
+                            self_taught.map(item =>
                                 <tr className="text-xl">
                                     <td className="pe-10">{item.name}</td>
                                     <td className="text-end accent-clr">{expertise_strings[item.expertise]}</td>

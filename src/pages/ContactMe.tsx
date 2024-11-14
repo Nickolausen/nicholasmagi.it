@@ -9,11 +9,10 @@ import './ContactMe.module.css'
 
 // }
 
-function ContactMe() 
-{
+function ContactMe() {
     return <>
         <section id="contact-me" className="pt-20 flex flex-wrap flex-col content-center">
-            <h1 className="text-center text-5xl font-bold uppercase ">Let's keep in touch!</h1>
+            <h1 className="text-center text-5xl font-bold uppercase ">Let's keep in touch (kids)!</h1>
             <form className="mt-10 p-10 flex flex-col gap-5 shadow-2xl rounded-lg bg-[--nav-bg]">
                 <div className="flex flex-col sm:flex-row justify-between">
                     <div>
