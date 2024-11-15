@@ -1,5 +1,5 @@
 // import styles from './EducationCard.module.css'
-import { EducationTitle } from '../data/Education'
+import { EducationTitle } from '../model/Education'
 
 interface IProps {
     data?: EducationTitle 

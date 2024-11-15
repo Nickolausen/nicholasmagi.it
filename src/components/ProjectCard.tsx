@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { languageToID, ProjectDetails } from "../data/ProjectDetails"
+import { languageToID, ProjectDetails } from "../model/ProjectDetails"
 
 interface IProps {
     project_info?: ProjectDetails

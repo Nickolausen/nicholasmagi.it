@@ -1,5 +1,5 @@
 import EducationCard from "../components/EducationCard"
-import { EducationTitle, Expertise } from "../data/Education"
+import { EducationTitle, Expertise } from "../model/Education"
 import styles from './Education.module.css'
 
 const from_school = [

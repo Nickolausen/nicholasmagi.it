@@ -1,5 +1,5 @@
 // import template_img from '../assets/media/template.jpeg'
-import { GHRepoDetails, languageToID } from '../data/ProjectDetails'
+import { GHRepoDetails, languageToID } from '../model/ProjectDetails'
 
 interface IProps {
     data: GHRepoDetails
@@ -21,10 +21,13 @@ function GHRepoCard({ data }: IProps ) {
                 </div>
                 <h3 className='text-2xl font-bold pt-3'>&lt;{data.name}<span className='accent-clr'>/</span>&gt;</h3>
                 <p className='text-pretty py-3'>{data.description}</p>
-                <div id={tooltip_id} role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-[--accent-color] rounded-lg shadow-lg opacity-0 tooltip">
-                    Made in {data.language}
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                </div>
+                { 
+                    data.language && 
+                    <div id={tooltip_id} role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-[--accent-color] rounded-lg shadow-lg opacity-0 tooltip">
+                        Made in {data.language}
+                        <div className="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                }
             </div>
             <a href={"https://github.com/Nickolausen/"+ data.name} className='w-full exclude text-center text-white align-middle py-4 transition hover:cursor-pointer hover:bg-[--accent-color-darker] bg-[--accent-color] rounded-b-lg justify-self-end'>
                 VIEW ON GITHUB

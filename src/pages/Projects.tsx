@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from "react"
 import GHRepoCard from "../components/GHRepoCard"
-import { GHRepoDetails, ProjectDetails } from "../data/ProjectDetails"
+import { GHRepoDetails, ProjectDetails } from "../model/ProjectDetails"
 import ProjectCard from "../components/ProjectCard"
 
 function Projects() 
@@ -10,7 +10,16 @@ function Projects()
     useEffect(() => {
         let fetchedRepos: GHRepoDetails[] = []
 
-        fetch("https://pinned.berrysauce.me/get/Nickolausen")
+        // TODO: Fix CORS issue
+        fetch("https://pinned.berrysauce.me/get/Nickolausen", 
+            {
+                method: "GET",
+                mode: "cors", 
+                headers: { 
+                    "Access-Control-Allow-Origin": "*",
+                    "Content-Type": "application/json" 
+                }
+            })
             .then((res) => res.json())
             .then((data) => {
                 data.forEach((el: any) => {
@@ -26,6 +35,7 @@ function Projects()
                     
                     setRepos(fetchedRepos)
                 })
+            .catch((e) => console.log(e))
     }, [])
 
     let projects: ProjectDetails[] = [
@@ -70,13 +80,19 @@ function Projects()
     return <>
         <section id="projects" className="pt-20">
             <h1 className="text-5xl font-bold uppercase">Projects</h1>
-            <h3 className="text-primary text-3xl font-bold uppercase mt-10"><i className="fa fa-chevron-right"></i> From my GitHub's pinned repositories</h3>
-            <div className="pt-8 grid md:grid-cols-2 2xl:grid-cols-3 gap-5 gap-y-8 text-primary">
-                { 
-                    repos.map<ReactNode>((repo: GHRepoDetails, idx: number) => <GHRepoCard key={idx} data={repo}/>)
-                }
-            </div>
-            <h3 className="text-primary text-3xl font-bold uppercase pt-20"><i className="fa fa-chevron-right"></i> From previous work experiences</h3>
+            { repos.length > 0 && <>
+                <h3 className="text-primary text-3xl font-bold uppercase mt-10"><i className="fa fa-chevron-right"></i> From my GitHub's pinned repositories</h3>
+                <div className="pt-8 grid md:grid-cols-2 2xl:grid-cols-3 gap-5 gap-y-8 text-primary">
+                    { 
+                        repos.map<ReactNode>((repo: GHRepoDetails, idx: number) => <GHRepoCard key={idx} data={repo}/>)
+                    }
+                </div>
+            </>}
+            { 
+                repos.length > 0 ? 
+                    <h3 className={"text-primary text-3xl font-bold uppercase pt-20"} ><i className="fa fa-chevron-right"></i> From previous work experiences</h3> : 
+                    <h3 className={"text-primary text-3xl font-bold uppercase pt-10"} ><i className="fa fa-chevron-right"></i> From previous work experiences</h3>
+            }
             <div className="pt-8 grid grid-cols-1 gap-5 text-primary">
                 {
                     projects.map<ReactNode>((proj: ProjectDetails, idx: number) => <ProjectCard key={idx} project_info={proj}/>)
