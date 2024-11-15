@@ -11,7 +11,7 @@ function Projects()
         let fetchedRepos: GHRepoDetails[] = []
 
         // TODO: Fix CORS issue
-        fetch("https://pinned.berrysauce.me/get/Nickolausen", 
+        fetch("https://pinned.berrysauce.dev/get/Nickolausen", 
             {
                 method: "GET",
                 mode: "cors", 
