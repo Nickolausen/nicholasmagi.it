@@ -203,6 +203,7 @@ export const languageToID: { [name: string]: string} = {
     "Ruby": "ruby",
     "Rust": "rust",
     "Sass": "sass",
+    "Shell": "bash",
     "Spring": "spring",
     "SQLite": "sqlite",
     "StackOverflow": "stackoverflow",

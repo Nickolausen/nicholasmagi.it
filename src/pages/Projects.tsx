@@ -10,7 +10,6 @@ function Projects()
     useEffect(() => {
         let fetchedRepos: GHRepoDetails[] = []
 
-        // TODO: Fix CORS issue
         fetch("https://pinned.berrysauce.dev/get/Nickolausen", 
             {
                 method: "GET",
