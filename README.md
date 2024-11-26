@@ -13,4 +13,6 @@ npm run dev
 - **Tailwind CSS**
 - Development server: **Vite**
 
-The application does not need Back-End at the moment, but it will surely be implemented as soon as it gets reasonable and necessary. There's an API call inside the project — used to retreive information about my GitHub pinned repositories - which is implemented by **@berrysauce** (https://github.com/berrysauce/pinned). Nothing too fancy, but delivers a nice result.
+The application does not need Back-End at the moment, but it will surely be implemented as soon as it gets reasonable and necessary. There's an API call inside the project — used to retreive information about my GitHub pinned repositories - which is implemented by **@berrysauce** (https://github.com/berrysauce/pinned). 
+
+Nothing too fancy, but delivers a nice result.
