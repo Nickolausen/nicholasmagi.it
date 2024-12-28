@@ -1,3 +1,127 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Figtree";
+    src: url("./assets/fonts/Figtree/static/Figtree-Regular.ttf");
+}
+
+@font-face {
+    font-family: "RubikDoodleShadow";
+    src: url("./assets/fonts/RubikDoodleShadow/RubikDoodleShadow-Regular.ttf");
+}
+
+@font-face {
+    font-family: "AGaramondPro";
+    src: url("./assets/fonts/AGaramondPro-Regular.otf");
+}
+
+[data-theme="dark"] {
+    --nav-bg: #212228;
+    --icon-fill: white;
+    --bg-color: #18181d;
+    --bg-pattern:#474747;
+    --primary-color: white;
+    --secondary-color: rgb(161, 161, 161);
+    --secondary-color-opaque: rgba(161, 161, 161, .3);
+    --accent-color: rgb(209, 0, 0);
+    --accent-color-darker: rgb(148, 6, 6);
+}
+
+[data-theme="light"] {
+    --nav-bg: rgb(255, 255, 255);
+    --icon-fill: black;
+    --bg-color: rgb(245, 245, 245);
+    --bg-pattern:#c6c5c5;
+    --primary-color: black;
+    --secondary-color: rgb(128, 128, 128);
+    --secondary-color-opaque: rgba(128, 128, 128, .3);
+    --accent-color: rgb(209, 0, 0);
+    --accent-color-opaque: rgba(209, 0, 0, .5);
+    --accent-color-darker: rgb(148, 6, 6);
+}
+
+:root {
+    --main-font-family: "PT Sans";
+    --secondary-font-family: "RubikDoodleShadow";
+}
+
+.first-letter {
+    color: var(--accent-color);
+}
+
+body {
+    background: var(--bg-color);
+    background-image: radial-gradient(var(--bg-pattern) 1px, transparent 0);
+    background-size: 40px 40px;
+    /* background-position: -19px -19px; */
+}
+
+nav, footer, input {
+    box-shadow: 0 0 0 1px var(--secondary-color-opaque) !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--accent-color) !important;
+}
+
+progress::-webkit-progress-value {
+    background: red;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.accent-clr,
+h1,
+h2 {
+    color: var(--accent-color);
+}
+
+a:not(.exclude) {
+    display: inline-block;
+    position: relative;
+    top: 0;
+}
+
+a:not(.exclude)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a:not(.exclude):hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+*,
+body {
+    font-family: var(--main-font-family);
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(209, 0, 0, .25);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--accent-color);
+}

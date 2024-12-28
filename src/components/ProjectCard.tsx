@@ -5,7 +5,7 @@ interface IProps {
     project_info?: ProjectDetails
 }
 
-const month_conversion: { [nr: string]: string } = {
+const monthConversion: { [nr: string]: string } = {
     "01": "January",
     "02": "February",
     "03": "March",
@@ -24,8 +24,8 @@ const month_conversion: { [nr: string]: string } = {
 
 export default function ProjectCard( { project_info }: IProps)  
 {    
-    let start_month: string = month_conversion[project_info?.start_date.split("/")[0]!!]
-    let end_month: string | undefined = month_conversion[project_info?.end_date?.split("/")[0]!!]
+    let start_month: string = monthConversion[project_info?.start_date.split("/")[0]!!]
+    let end_month: string | undefined = monthConversion[project_info?.end_date?.split("/")[0]!!]
     
     let start_year: string = project_info?.start_date.split("/")[1]!!
     let end_year: string | undefined = project_info?.start_date.split("/")[1]!!
@@ -36,14 +36,14 @@ export default function ProjectCard( { project_info }: IProps)
     let img_id: string = project_info?.name.toLowerCase().replace(" ", "_")!!
 
     return <>
-        <div className="w-full shadow-xl flex items-center flex-col md:flex-row rounded-lg bg-red hover:shadow-2xl hover:scale-[1.02] transition bg-[--bg-color]">
+        <div className="w-full shadow-xl flex items-center flex-col md:flex-row rounded-lg hover:shadow-2xl hover:scale-[1.02] transition bg-[--nav-bg]">
             <div className="w-full md:w-auto md:min-w-2xl h-full flex justify-center items-center bg-white py-3 md:py-0 rounded-l-lg"> { /* Image container */}
                 <img className="max-w-64 lg:max-w-96 rounded-lg px-2" src={import.meta.env.BASE_URL + "imgs/projects/" + img_id + ".png"} alt="" />
             </div>
             <div className="p-5  h-full flex flex-col justify-between">
                 <div>
                     <h3 className='text-3xl font-bold'>{!project_info?.is_source_available ? <i className="fa fa-lock" data-tooltip-target={"tooltip-privacy-" + img_id} data-tooltip-placement="top"></i> : <></>} &lt;{project_info?.name}<span className='accent-clr'>/</span>&gt;</h3>
-                    <h4 className="text-xl"><span className="accent-clr">{project_info?.company} @ {project_info?.location}</span> <span className="text-gray-600">- from {start_month} {start_year} {end_year ? <>{"to " + end_month + " " + end_year}</> : <>&#8212; ongoing</>}</span></h4>
+                    <h4 className="text-xl"><span className="accent-clr">{project_info?.company} @ {project_info?.location}</span> <span className="text-[--secondary-color]">- from {start_month} {start_year} {end_year ? <>{"to " + end_month + " " + end_year}</> : <>&#8212; ongoing</>}</span></h4>
                     <p className="mt-3 text-pretty">{project_info?.description}</p>
                 </div>
                 <div className="flex flex-row gap-5 flex-wrap">

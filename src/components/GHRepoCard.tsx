@@ -9,13 +9,13 @@ function GHRepoCard({ data }: IProps ) {
     let tooltip_id = "tooltip-" + data.name + data.language
 
     return <>
-        <article className='overflow-hidden bg-[--bg-color] flex flex-col flex-wrap content-center justify-between shadow-xl rounded-lg hover:scale-[1.02] hover:shadow-2xl transition'>
+        <article className='overflow-hidden bg-[--nav-bg] flex flex-col flex-wrap content-center justify-between shadow-xl rounded-lg hover:scale-[1.02] hover:shadow-2xl transition'>
             <div className='p-6 w-full'>
                 {/* <img src={template_img}></img> */}
                 <div className='py-2 flex justify-between content-center'>
                     <small className='mt-1 inline-block align-middle h-fit'>
                         <p className='h-fit'><i className="fa fa-code bg-transparent"></i> Made by <span className='accent-clr'>{data.author}</span></p>
-                        <p className='h-fit'><i className='fa fa-star'/> by <span className='accent-clr'>{data.stars}</span> people <br className='inline sm:hidden'/> {data.stars === 0 ? <span className='text-gray-600'>&#8212;{" you can be the first!"}</span> : <></>}</p> 
+                        <p className='h-fit'><i className='fa fa-star'/> by <span className='accent-clr'>{data.stars}</span> people <br className='inline sm:hidden'/> {data.stars === 0 ? <span className='text-[var(--secondary-color)]'>&#8212;{" you can be the first!"}</span> : <></>}</p> 
                     </small>
                     <img data-tooltip-target={tooltip_id} data-tooltip-placement="bottom" className='w-10' src={'https://skillicons.dev/icons?i=' + languageToID[data.language]}></img>
                 </div>

@@ -1,30 +1,28 @@
-import './App.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import InitialScreen from './pages/InitialScreen'
 import Education from './pages/Education'
 import Projects from './pages/Projects'
 import ContactMe from './pages/ContactMe'
+import DefaultLayout from './components/LayoutComponents/DefaultLayout'
 
 function App() {
-  
-  localStorage.setItem("theme", "light")
-
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    localStorage.setItem("theme", "dark")
+  } else {
+    localStorage.setItem("theme", "light")
+  }
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <Routes>
-        <Route index path='/' element={<>
-            <Navbar></Navbar>
-            <div className='px-10 lg:px-[10rem] 2xl:px-[25rem] md:pt-10 lg:pt-0'>
-              <InitialScreen></InitialScreen>
-              <Education></Education>
-              <Projects></Projects>
-              <ContactMe></ContactMe>
-            </div>
-            <Footer></Footer>
-        </>}>
+        <Route index path='/' element={
+          <DefaultLayout>
+              <InitialScreen/>
+              <Education/>
+              <Projects/>
+              <ContactMe/>
+          </DefaultLayout>
+        }>
         </Route>
       </Routes>
     </Router>

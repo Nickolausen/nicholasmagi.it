@@ -11,7 +11,7 @@ function InitialScreen() {
                         <div className='mt-5 sm:mt-0 text-4xl'>Hi! I'm</div>
                         <h1 className='text-6xl lg:text-8xl text-primary'><span className='first-letter'>N</span>icholas <span className='first-letter'>M</span>agi</h1>
                         <div className='text-4xl'><span className='italic'>Aspirant</span> Web & Software Developer</div>
-                        <div className='text-xl lg:text-2xl text-gray-500 pb-10'>Computer Science Undergraduate @ University of Bologna, IT</div>
+                        <div className='text-xl lg:text-2xl text-[--secondary-color] pb-10'>Computer Science Undergraduate @ University of Bologna, IT</div>
                         <div className='w-fit' data-tooltip-target="tooltip-cv" data-tooltip-placement="bottom">
                             <a className='exclude' href={import.meta.env.BASE_URL + "CV-Nicholas-Magi.pdf"}>
                                 <Button fa_icon_id='fa-file' id='tooltip-cv' text='Check my resume' isDisabled={!isCVLoaded}/>
@@ -30,7 +30,9 @@ function InitialScreen() {
                     <div className='order-first xl:order-last flex justify-center pt-[7em] xl:pt-0'>
                         <div className='relative shadow-2xl'>
                             <img className='max-w-64 md:max-w-48 xl:max-w-96 rounded-lg shadow-2xl' src={import.meta.env.BASE_URL + "profile.jpg"} alt="Profile Picture" />
-                            {/* <div className='h-10 absolute bg-[--accent-color] bottom-0 w-full flex justify-center content-center'>All work and no play makes Jack a dull boy</div> */}
+                            {/* <div className='h-10 absolute bg-[--accent-color] bottom-0 w-full align-middle'>
+                                    All work and no play makes Jack a dull boy
+                            </div> */}
                         </div>
                     </div>
                 </section>
