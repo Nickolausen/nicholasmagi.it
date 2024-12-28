@@ -39,7 +39,7 @@ function Education()
                     <div className="text-sm text-secondary">Issued on: 29/07/2023</div>
                     <div className="text-2xl">Cambridge Advanced English (CAE)</div>
                     <div className="text-xl accent-clr">British School @ Rimini, IT</div>
-                    <div className="mt-5 flex flex-row justify-between">
+                    <div className="mt-5 flex flex-row justify-between items-center">
                         <div className="font-bold text-2xl">C1 Level</div>
                         <div>Grade C</div>
                     </div>

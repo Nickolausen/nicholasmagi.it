@@ -4,8 +4,11 @@ import { useState } from 'react'
 import LightOffIco from './icons/LightOffIco'
 import LightOnIco from './icons/LightOnIco'
 
+type Props = {
+    className?: string
+}
 
-export default function ThemeSwitcher() 
+export default function ThemeSwitcher({ className }: Props) 
 {
     const [ currentTheme, setCurrentTheme ] = useState<string>(localStorage.getItem("theme")!!)
     const [ isDarkModeOn, setIsDarkModeOn ] = useState<boolean>(localStorage.getItem("theme") === "dark")
@@ -22,8 +25,15 @@ export default function ThemeSwitcher()
 
     document.querySelector("html")?.setAttribute("data-theme", currentTheme)
 
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (evt) => {
+        if (evt.matches) {
+            toggleTheme()
+        }
+    });
+
     return <>
         <ReactSwitch 
+            className={className}
             checked={isDarkModeOn} 
             onChange={toggleTheme}
             offColor="#3836b5"

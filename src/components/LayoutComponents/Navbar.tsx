@@ -1,5 +1,6 @@
 import SocialCard from "../SocialCard"
 import ThemeSwitcher from "../ThemeSwitcher"
+import MyNavLink from "./MyNavLink"
 
 function Navbar() 
 {
@@ -13,9 +14,9 @@ function Navbar()
     ]
 
     return (
-        <nav className="flex flex-row justify-center w-screen fixed z-10 bg-[--nav-bg] text-primary py-3">
+        <nav className="fixed flex flex-row justify-center w-screen z-10 bg-[--nav-bg] text-primary py-3">
             <div className="w-screen lg:w-auto max-w-screen-xl flex flex-wrap items-center justify-between p-4">
-                <a href="#home" className="exclude flex items-center space-x-3 rtl:space-x-reverse pe-auto lg:pe-20">
+                <a href="/#home" className="exclude flex items-center space-x-3 rtl:space-x-reverse pe-auto lg:pe-20">
                     <span className="self-center text-4xl whitespace-nowrap">
                         <span className="text-[--accent-color]">NM</span>'s Portfolio
                     </span>
@@ -47,46 +48,31 @@ function Navbar()
                 <div className="hidden w-full lg:block lg:w-auto" id="navbar-solid-bg">
                     <ul className="flex flex-col font-medium mt-4 rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-transparent dark:bg-gray-800 lg:dark:bg-transparent dark:border-gray-700">
                         <li>
-                            <a
-                                href="#home"
-                                className="block align-middle py-2 px-3 lg:p-0 text-primary rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[--accent-color] transition"
-                                aria-current="page"
-                            >
+                            <MyNavLink to="/#home">
                                 Home
-                            </a>
+                            </MyNavLink>
                         </li>
                         <li>
-                            <a
-                                href="#education"
-                                className="block align-middle py-2 px-3 lg:p-0 text-primary rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-[--accent-color] transition dark:text-white lg:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                            >
+                            <MyNavLink to="/#education">
                                 Education
-                            </a>
+                            </MyNavLink>
                         </li>
                         <li>
-                            <a
-                                href="#projects"
-                                className="block align-middle py-2 px-3 lg:p-0 text-primary rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-[--accent-color] transition dark:text-white lg:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                            >
+                           <MyNavLink to="/#projects">
                                 Projects
-                            </a>
+                            </MyNavLink>
                         </li>
                         <li>
-                            <a
-                                href="#contact-me"
-                                className="block align-middle py-2 px-3 lg:p-0 text-primary rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-[--accent-color] transition dark:text-white lg:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                            >
+                            <MyNavLink to="/#contact-me">
                                 Contact me
-                            </a>
+                            </MyNavLink>
                         </li>
-                        <li className="py-2 ps-3 lg:py-0 lg:ps-20 flex flex-row gap-5">
+                        <li className="py-2 px-3 lg:py-0 lg:ps-20 flex flex-row gap-5">
                             {
                                 contact_tabs.map(it => it.item)
                             }
+                            <ThemeSwitcher className="ms-auto"/>
                         </li>
-                        <div className="py-2 px-3 lg:p-0 flex flex-row lg:items-center">
-                            <ThemeSwitcher/>
-                        </div>
                     </ul>
                 </div>
             </div>
