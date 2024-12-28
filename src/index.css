@@ -115,7 +115,7 @@ a:not(.exclude):hover::after {
 
 *,
 body {
-    font-family: var(--main-font-family);
+    font-family: var(--main-font-family), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 progress::-webkit-progress-bar {

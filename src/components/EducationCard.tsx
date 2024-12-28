@@ -1,4 +1,3 @@
-// import styles from './EducationCard.module.css'
 import { EducationTitle } from '../model/Education'
 
 interface IProps {
