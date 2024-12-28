@@ -8,7 +8,7 @@ type Props = {
 export default function DefaultLayout({ children }: Props) {
     return <>
         <Navbar/>
-        <div className='h-full px-10 lg:px-[10rem] 2xl:px-[25rem] md:pt-10 lg:pt-0'>
+        <div className='h-[100dhv] px-10 lg:px-[10rem] 2xl:px-[25rem] md:pt-10 lg:pt-0'>
             { children }
         </div>
         <Footer/>
