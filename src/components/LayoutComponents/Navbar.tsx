@@ -14,7 +14,7 @@ function Navbar()
     ]
 
     return (
-        <nav className="fixed flex flex-row justify-center w-screen z-10 bg-[--nav-bg] text-primary py-3">
+        <nav className="fixed flex flex-row justify-center w-screen z-10 bg-[--nav-bg] text-primary">
             <div className="w-screen lg:w-auto max-w-screen-xl flex flex-wrap items-center justify-between p-4">
                 <a href="/#home" className="exclude flex items-center space-x-3 rtl:space-x-reverse pe-auto lg:pe-20">
                     <span className="self-center text-4xl whitespace-nowrap">
