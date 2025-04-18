@@ -1,11 +1,14 @@
-export interface EducationTitle {
+/**
+ * DD
+ */
+export type EducationTitle = {
     start_year: number,
     end_year: number,
     title_description: string,
     school: string,
     grade?: number,
     max_grade: number,
-    withHonours: boolean
+    withHonours: boolean | undefined
 }
 
 interface Skill {

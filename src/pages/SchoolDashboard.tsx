@@ -1,9 +1,6 @@
-// import TESTDOC from 'public/notes/misc/p1-inizializzazione.md'
 
 export default function SchoolDashboard() {
     
-    // let reader = new FileReader()
-    //reader.readAsText()
     return <section className="h-full pt-[15em]">
         <h1 className="text-6xl text-center">Welcome!</h1>
         <p className="text-primary text-xl text-center pt-5">

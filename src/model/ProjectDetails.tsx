@@ -1,4 +1,4 @@
-export interface GHRepoDetails {
+export type GHRepoDetails = {
     author: string,
     name: string,
     description: string,
@@ -6,7 +6,7 @@ export interface GHRepoDetails {
     stars: number
 }
 
-export interface ProjectDetails {
+export type ProjectDetails = {
     name: string,
     company: string,
     location: string,

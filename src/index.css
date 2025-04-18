@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@font-face {
+    font-family: "PT-Sans";
+    src: url("./assets/fonts/PT-Sans/PTSans-Regular.ttf");
+}
 
 @font-face {
     font-family: "Figtree";
@@ -43,7 +46,7 @@
 }
 
 :root {
-    --main-font-family: "PT Sans";
+    --main-font-family: "PT-Sans";
     --secondary-font-family: "RubikDoodleShadow";
 }
 
